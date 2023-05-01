@@ -78,3 +78,4 @@ __pycache__
 .vscode
 DateProcessing.pyproject
 Erica/DS_Store
+*.pyproject
