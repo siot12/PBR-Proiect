@@ -22,7 +22,7 @@ class Ui_mainmenu(object):
     def setupUi(self, mainmenu):
         if not mainmenu.objectName():
             mainmenu.setObjectName(u"mainmenu")
-        mainmenu.resize(400, 300)
+        mainmenu.resize(401, 300)
         self.verticalLayout = QVBoxLayout(mainmenu)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.pbDaysFrom = QPushButton(mainmenu)
