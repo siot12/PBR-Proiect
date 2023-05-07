@@ -23,7 +23,7 @@ class Ui_daysafter(object):
     def setupUi(self, daysafter):
         if not daysafter.objectName():
             daysafter.setObjectName(u"daysafter")
-        daysafter.resize(564, 207)
+        daysafter.resize(564, 257)
         sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -120,14 +120,12 @@ class Ui_daysafter(object):
         self.pbCancel = QPushButton(daysafter)
         self.pbCancel.setObjectName(u"pbCancel")
         self.pbCancel.setMinimumSize(QSize(0, 30))
-        self.pbCancel.setStyleSheet(u"border: 1px solid red; border-radius: 20px;")
 
         self.layoutButtons.addWidget(self.pbCancel)
 
         self.pbOk = QPushButton(daysafter)
         self.pbOk.setObjectName(u"pbOk")
         self.pbOk.setMinimumSize(QSize(0, 30))
-        self.pbOk.setStyleSheet(u"border: 1px solid green; border-radius: 20px;")
 
         self.layoutButtons.addWidget(self.pbOk)
 

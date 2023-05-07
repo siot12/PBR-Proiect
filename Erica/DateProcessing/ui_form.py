@@ -19,7 +19,9 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QSizePolicy, QStackedW
     QWidget)
 
 from daysafter import daysafter
+from distancebetweendates import distancebetweendates
 from mainmenu import mainmenu
+from timeepoch import timeepoch
 
 class Ui_mainwindow(object):
     def setupUi(self, mainwindow):
@@ -36,13 +38,19 @@ class Ui_mainwindow(object):
         self.daysafter = daysafter()
         self.daysafter.setObjectName(u"daysafter")
         self.stackedWidget.addWidget(self.daysafter)
+        self.distance = distancebetweendates()
+        self.distance.setObjectName(u"distance")
+        self.stackedWidget.addWidget(self.distance)
+        self.epoch = timeepoch()
+        self.epoch.setObjectName(u"epoch")
+        self.stackedWidget.addWidget(self.epoch)
 
         self.horizontalLayout.addWidget(self.stackedWidget)
 
 
         self.retranslateUi(mainwindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(mainwindow)

@@ -17,10 +17,12 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="mainmenu" name="main"/>
      <widget class="daysafter" name="daysafter"/>
+     <widget class="distancebetweendates" name="distance"/>
+     <widget class="timeepoch" name="epoch"/>
     </widget>
    </item>
   </layout>
@@ -35,7 +37,19 @@
   <customwidget>
    <class>daysafter</class>
    <extends>QWidget</extends>
-   <header>daysafter</header>
+   <header location="global">daysafter</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>distancebetweendates</class>
+   <extends>QWidget</extends>
+   <header location="global">distancebetweendates</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>timeepoch</class>
+   <extends>QWidget</extends>
+   <header>timeepoch</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

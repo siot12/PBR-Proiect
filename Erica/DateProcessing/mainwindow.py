@@ -21,7 +21,11 @@ class mainwindow(QWidget):
         self.ui = Ui_mainwindow()
         self.ui.setupUi(self)
         QtCore.QObject.connect(self.ui.main.ui.pbDaysFrom, QtCore.SIGNAL("clicked()"), lambda: self.changepage(1))
+        QtCore.QObject.connect(self.ui.main.ui.pbDaysBetween, QtCore.SIGNAL("clicked()"), lambda: self.changepage(2))
+        QtCore.QObject.connect(self.ui.main.ui.pbEpoch, QtCore.SIGNAL("clicked()"), lambda: self.changepage(3))
         QtCore.QObject.connect(self.ui.daysafter.ui.pbCancel, QtCore.SIGNAL("clicked()"), lambda: self.changepage(0))
+        QtCore.QObject.connect(self.ui.distance.ui.pbCancel, QtCore.SIGNAL("clicked()"), lambda: self.changepage(0))
+        QtCore.QObject.connect(self.ui.epoch.ui.pbCancel, QtCore.SIGNAL("clicked()"), lambda: self.changepage(0))
         self.ui.stackedWidget.setCurrentIndex(0)
 
 
