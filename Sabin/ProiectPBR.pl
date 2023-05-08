@@ -20,17 +20,18 @@ adauga_zile_la_data(Data, N, Rezultat) :-
 
 adauga_zile_la_data_helper(Zi, Luna, An, N, Rezultat) :-
     zile_in_luna(Luna, An, ZileInLuna),
-    ZiUrmatoare is Zi + N - 1, % Deduct 1 from N because we've already counted the current day
-    (ZiUrmatoare >= ZileInLuna ->
+    ZiUrmatoare is Zi + N ,
+    (ZiUrmatoare > ZileInLuna ->
         NewLuna is Luna + 1,
         (NewLuna > 12 ->
             NewAn is An + 1,
             NewLuna1 is NewLuna - 12
         ;
-            NewAn = An,
+            NewAn is An,
             NewLuna1 is NewLuna
         ),
-        adauga_zile_la_data_helper(ZiUrmatoare - ZileInLuna + 1, NewLuna1, NewAn, 1, Rezultat)
+        adauga_zile_la_data_helper(ZiUrmatoare - ZileInLuna, NewLuna1, NewAn, 0, Rezultat)
     ;
         Rezultat = [ZiUrmatoare, Luna, An]
     ).
+
