@@ -12,7 +12,7 @@ days_in_month(Year, Month, Days) :-
 date_to_epoch(date(Year, Month, Day), Epoch) :-
     % Calculate the number of seconds between the Unix epoch and the given date
     days_in_month(Year, Month, DaysInMonth),
-    EpochSeconds is ((Year - 1970) * 31536000) +  % Number of seconds in a year
+    EpochSeconds is ((Year - 1970) * 31556926) +  % Number of seconds in a year
                   (DaysInMonth * 86400 * (Month - 1)) +  % Number of seconds in previous months
                   ((Day - 1) * 86400),           % Number of seconds in the current day
 
