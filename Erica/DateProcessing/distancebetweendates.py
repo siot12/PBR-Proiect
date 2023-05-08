@@ -23,8 +23,7 @@ class distancebetweendates(QtWidgets.QWidget):
 
     def compute_distance(self, day1, month1, year1, day2, month2, year2):
         prolog = Prolog()
-        prolog.consult("Cosmin/Ex2.pl")
-        rez = prolog.query("distance_between_dates(date(2023,10, 10), date(2089,1, 1), Days)")
-        print(list(rez))
-        #self.ui.leNoDays.setEnabled(True)
-        #self.ui.leNoDays.setText(rez)
+        prolog.consult("Cosmin/Ex2_2.pl")
+        rez = list(prolog.query("date_difference(date({0},{1},{2}), date({3},{4}, {5}), Difference)".format(year1, month1, day1, year2, month2, day2)))[0]['Difference']
+        self.ui.leNoDays.setEnabled(True)
+        self.ui.leNoDays.setText(str(rez))
