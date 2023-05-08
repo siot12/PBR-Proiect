@@ -30,8 +30,6 @@ days_in_month(11, _, 30).
 
 % get distance between dates in days
 distance_between_dates(Date1, Date2, Days) :-
-    Date1 = date(Year1, Month1, Day1),
-    Date2 = date(Year2, Month2, Day2),
     % so it doesn't matter the order of dates
     Date1 @< Date2 -> 
         calculate_distance(Date1, Date2, Days)
