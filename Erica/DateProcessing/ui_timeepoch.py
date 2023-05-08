@@ -124,9 +124,18 @@ class Ui_timeepoch(object):
 
         self.pbCancel = QPushButton(timeepoch)
         self.pbCancel.setObjectName(u"pbCancel")
+        self.pbCancel.setMinimumSize(QSize(0, 30))
 
         self.verticalLayout.addWidget(self.pbCancel)
 
+        QWidget.setTabOrder(self.leDay, self.leMonth)
+        QWidget.setTabOrder(self.leMonth, self.leYear)
+        QWidget.setTabOrder(self.leYear, self.leOutputTimestamp)
+        QWidget.setTabOrder(self.leOutputTimestamp, self.pbComputeEpoch)
+        QWidget.setTabOrder(self.pbComputeEpoch, self.leTimestamp)
+        QWidget.setTabOrder(self.leTimestamp, self.leOutputDate)
+        QWidget.setTabOrder(self.leOutputDate, self.pbComputeTimestamp)
+        QWidget.setTabOrder(self.pbComputeTimestamp, self.pbCancel)
 
         self.retranslateUi(timeepoch)
 

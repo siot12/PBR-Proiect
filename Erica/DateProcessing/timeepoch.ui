@@ -123,10 +123,22 @@
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
     </spacer>
    </item>
    <item>
     <widget class="QPushButton" name="pbCancel">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
      <property name="text">
       <string>Cancel</string>
      </property>
@@ -134,6 +146,17 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>leDay</tabstop>
+  <tabstop>leMonth</tabstop>
+  <tabstop>leYear</tabstop>
+  <tabstop>leOutputTimestamp</tabstop>
+  <tabstop>pbComputeEpoch</tabstop>
+  <tabstop>leTimestamp</tabstop>
+  <tabstop>leOutputDate</tabstop>
+  <tabstop>pbComputeTimestamp</tabstop>
+  <tabstop>pbCancel</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
