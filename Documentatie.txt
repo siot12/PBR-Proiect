@@ -1,0 +1,46 @@
+Exemple pentru rulare:
+
+Determine what day it would be if N days pass:
+		01.04.2004 2 -> 03.04.2004
+		05.09.2004 100 -> 14.12.2004
+		12.09.1990 900 -> 01.03.1993
+
+Number Of days between dates: 
+	       First Date: 10.2.2023  Second Date:15.2.2023 -> R: 5 zile
+	       First Date: 10.2.2023  Second Date:13.9.2023 -> R: 220 zile
+	       First Date: 10.2.2023  Second Date:10.2.2027 -> R: 1460 zile
+
+Epoch Timestamp:
+               8.05.2023 -> 1683489878
+ 	       1683489878 -> 7.05.2023 (DIN CAUZA OREI)
+	
+	       9.01.2009 -> 1231411314
+	       1231411314 -> 8.01.2009 (Din cauza orei)
+			
+	       25.03.2001 -> 985522306
+	       985522306 -> 25.03.2001
+
+Motivatie:
+	 Ca limbaj de proiectare am folosit Prolog deoarece este declarativ si logic, foloseste 
+algoritmi ce fac posibila rezolvarea problemelor complexe fara a se pune accent pe implementare, doar
+pe scrierea problemei si  datorita bibliotecilor
+care exista (noi nu le-am folosit). CLIPS este mai dificil de invatat si de utilizat datorita 
+complexitatii sale si a conceptelor specifice sistemelor expert. 
+	De asemenea am ales Python pentru simplitatea integrarii cu interfata grafica(Qt) si cu codul
+Prolog datorita bibliotecii Pyswip. 
+
+Instructiuni de instalare(presupunem ca avem python instalat pe computerul nostru):
+	 1.Install PySide6: pip install pyside6
+	 2.Install Pyswip: pip install pyswip
+	 3.Install swi-prolog@8.4 (https://www.swi-prolog.org/download/stable/bin/swipl-8.4.2-1.x64.exe.envelope)
+
+Lista membrilor:
+	- Ciot Tudor Calin 3A2
+	- Caba Oana Erica 3A2
+	- Chirila Sabin 3A2
+	- Anton Ilie Cosmin 3A2 
+	 
+
+
+
+   
