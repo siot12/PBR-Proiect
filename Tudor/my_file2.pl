@@ -4,7 +4,7 @@ iterate_months(Days,Final) :-
 iterate_months(Days, _, Final) :-
     Days =< 31,
     Final is Days.
-
+% Functia recursiva care itereaza prin lunile anului
 iterate_months(Days, Month, Final) :-
     days_in_month(Month, DaysInMonth),
     Days >= DaysInMonth,
@@ -39,6 +39,7 @@ days_in_month(october, 31).
 days_in_month(november, 30).
 days_in_month(december, 31).
 
+% Convertim o data in timestamp (numar de secunde de la epoch-ul Unix)
 epoch_to_date(Epoch, date(FinalYear,FinalMonth,Final)) :-
     Seconds is Epoch,
     Year is Seconds div 31556926,
