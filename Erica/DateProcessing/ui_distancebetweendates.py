@@ -129,6 +129,14 @@ class Ui_distancebetweendates(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
+        QWidget.setTabOrder(self.leDayFirst, self.leMonthFirst)
+        QWidget.setTabOrder(self.leMonthFirst, self.leYearFirst)
+        QWidget.setTabOrder(self.leYearFirst, self.leDaySecond)
+        QWidget.setTabOrder(self.leDaySecond, self.leMonthSecond)
+        QWidget.setTabOrder(self.leMonthSecond, self.leYearSecond)
+        QWidget.setTabOrder(self.leYearSecond, self.leNoDays)
+        QWidget.setTabOrder(self.leNoDays, self.pbCancel)
+        QWidget.setTabOrder(self.pbCancel, self.pbConfirm)
 
         self.retranslateUi(distancebetweendates)
 

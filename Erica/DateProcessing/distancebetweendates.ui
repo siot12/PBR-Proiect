@@ -101,6 +101,12 @@
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
     </spacer>
    </item>
    <item>
@@ -138,6 +144,17 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>leDayFirst</tabstop>
+  <tabstop>leMonthFirst</tabstop>
+  <tabstop>leYearFirst</tabstop>
+  <tabstop>leDaySecond</tabstop>
+  <tabstop>leMonthSecond</tabstop>
+  <tabstop>leYearSecond</tabstop>
+  <tabstop>leNoDays</tabstop>
+  <tabstop>pbCancel</tabstop>
+  <tabstop>pbConfirm</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
