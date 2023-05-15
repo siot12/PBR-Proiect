@@ -3,7 +3,7 @@ leap_year(Year) :-
     0 is mod(Year, 4),
     (mod(Year, 100) \= 0 ; mod(Year, 400) =:= 0).
 
-$ Functie care ne ajuta sa aflam numarul de zile dintr-o luna a unui an dat
+% Functie care ne ajuta sa aflam numarul de zile dintr-o luna a unui an dat
 days_in_month(Year, Month, Days) :-
     nth0(Month, [31,28,31,30,31,30,31,31,30,31,30,31], DaysList),
     (Month =:= 1, leap_year(Year) -> Days is 29 ; Days is DaysList).
